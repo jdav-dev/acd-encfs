@@ -18,20 +18,20 @@ docker run -d --name acd-encfs \
 
 Password for decrypting EncFS:
 ```
--e ENCFS6_PASSWORD=""
+-e ENCFS6_PASSWORD=''
 ```
 
-Local path to the EncFS config (default target is /etc/.encfs6.xml, see below to change it):
+EncFS config (default target is /etc/.encfs6.xml, see below to change it):
 ```
 -v /local/path/to/.encfs6.xml:/etc/.encfs6.xml:ro
 ```
 
-Local directory which contains oauth_data:
+Writable directory for acd_cli cache, must contain oauth_data:
 ```
 -v /local/path/to/acd_cli:/root/.cache/acd_cli
 ```
 
-Local directory to mount the unencrypted files:
+Directory to mount the unencrypted files:
 ```
 -v /local/mount/target:/mnt/encrypted:shared
 ```
@@ -48,13 +48,13 @@ Location of the encrypted directory within the mounted Amazon Cloud Drive direct
 -e ACD_ENCRYPTED_SUBDIR="/"
 ```
 
-Change the location of the EncFS config in the container:
+Change the EncFS config location in the container:
 ```
 -e ENCFS6_CONFIG="/etc/.encfs6.xml"
 ```
 
-Change UID and GID of the mounted files:
+Change UID and GID of mounted files:
 ```
--e USER_UID="1000"
+-e USER_UID="1000" \
 -e USER_GID="1000"
 ```
