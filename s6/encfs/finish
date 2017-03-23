@@ -1,0 +1,4 @@
+#!/bin/sh
+
+/usr/bin/printf "unmounting EncFS\n"
+/bin/fusermount -u /mnt/encrypted

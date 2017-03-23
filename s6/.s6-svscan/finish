@@ -1,0 +1,3 @@
+#!/bin/sh
+
+/bin/umount -f /mnt/encrypted

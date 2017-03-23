@@ -1,0 +1,10 @@
+#!/bin/sh
+
+/usr/bin/printf "Creating ACD mount target\n"
+/bin/mkdir -p /mnt/acd
+
+/usr/bin/printf "Syncing with ACD\n"
+/usr/bin/acdcli sync
+
+/bin/fdmove 1 3 /usr/bin/printf "Mounting ACD\n"
+/usr/bin/acdcli mount --modules="subdir,subdir=$ACD_MOUNT_SUBDIR" -fg -i 900 /mnt/acd
