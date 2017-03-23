@@ -1,5 +1,6 @@
 acd-encfs
 =========
+[![](https://images.microbadger.com/badges/version/jdavis92/acd-encfs.svg)](https://microbadger.com/images/jdavis92/acd-encfs) [![](https://images.microbadger.com/badges/image/jdavis92/acd-encfs.svg)](https://microbadger.com/images/jdavis92/acd-encfs)
 
 Mount EncFS stored in Amazon Cloud Drive using Docker.
 
