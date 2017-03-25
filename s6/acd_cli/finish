@@ -4,4 +4,4 @@
 /bin/s6-svwait -d /etc/s6/encfs
 
 /usr/bin/printf "Unmounting ACD\n"
-/usr/bin/acdcli umount
+/usr/bin/acd_cli umount

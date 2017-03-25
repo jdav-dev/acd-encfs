@@ -22,8 +22,8 @@ ENV ACD_ENCRYPTED_SUBDIR="/" \
     ACD_MOUNT_SUBDIR="/" \
     ENCFS6_CONFIG="/etc/.encfs6.xml" \
     ENCFS6_PASSWORD='' \
-    USER_UID="1000" \
-    USER_GID="1000"
+    MOUNT_UID="1000" \
+    MOUNT_GID="1000"
 
 VOLUME "/mnt/encrypted"
 

@@ -56,6 +56,6 @@ Change the EncFS config location in the container:
 
 Change UID and GID of mounted files:
 ```
--e USER_UID="1000" \
--e USER_GID="1000"
+-e MOUNT_UID="1000" \
+-e MOUNT_GID="1000"
 ```

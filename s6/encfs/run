@@ -4,13 +4,13 @@
 /bin/mkdir -p /mnt/encrypted
 
 /usr/bin/printf "Waiting for ACD to mount\n"
-/bin/s6-svwait -U /etc/s6/acdcli
+/bin/s6-svwait -U /etc/s6/acd_cli
 /bin/sleep 5
 
 /usr/bin/printf "Mounting EncFS\n"
 /bin/printenv ENCFS6_PASSWORD | /usr/bin/encfs \
 	-Sf \
 	--public \
-	-o uid=$USER_UID,gid=$USER_GID \
+	-o uid=$MOUNT_UID,gid=$MOUNT_GID \
 	/mnt/acd$ACD_ENCRYPTED_SUBDIR \
 	/mnt/encrypted
